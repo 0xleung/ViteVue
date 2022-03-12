@@ -1,11 +1,16 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import useUpdate from '../Compositions/useUpdate';
 
 defineProps<{ msg: string }>()
+const emitX = defineEmits(['x'])
 
 const count = ref(0)
 const [x, y, color] = useUpdate(888, 888, 'black');
+
+watch(x, () => {
+  emitX('x', x.value)
+})
 
 </script>
 
