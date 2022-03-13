@@ -17,10 +17,8 @@ watch(x, () => {
 <template>
   <h1>{{ msg }}</h1>
 
-  
-
   <button type="button" @click="count++">count is: {{ count }}</button>
-  <p v-bind:class="[color]">
+  <p v-bind:style="{color: color}">
     mouse x: {{ x }} mouse y: {{ y }}
   </p>
 </template>
@@ -40,12 +38,5 @@ code {
   padding: 2px 4px;
   border-radius: 4px;
   color: #304455;
-}
-
-.black {
-  color: #000;
-}
-.red{
-  color: #f00;
 }
 </style>
