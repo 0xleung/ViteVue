@@ -6,8 +6,3 @@ declare module '*.vue' {
   const component: DefineComponent<{}, {}, any>
   export default component
 }
-
-declare interface Window {
-  ethereum: any;
-  web3: any;
-}
