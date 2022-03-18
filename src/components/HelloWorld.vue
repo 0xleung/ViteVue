@@ -6,7 +6,7 @@ defineProps<{ msg: string }>()
 const emitX = defineEmits(['x'])
 
 const count = ref(0)
-const [x, y, color] = useUpdate(888, 888, 'black');
+const [x, y, color] = useUpdate(666, 666, 'black');
 
 watch(x, () => {
   emitX('x', x.value)
